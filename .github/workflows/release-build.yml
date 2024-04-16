@@ -27,7 +27,7 @@ jobs:
 
 
       - name: Build
-        uses: SunHHB/gh-action-sdk@go1.21
+        uses: SunHHB/gh-action-sdk@go1.22
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.sdk }}
           FEEDNAME: packages_ci
