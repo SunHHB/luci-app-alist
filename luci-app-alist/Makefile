@@ -6,7 +6,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-alist
-PKG_VERSION:=1.1.3
+PKG_VERSION:=git-24.999.32222-ddd9f8f
 PKG_RELEASE:=1
 
 LUCI_TITLE:=LuCI support for alist
