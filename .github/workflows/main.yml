@@ -42,7 +42,7 @@ jobs:
 
       - name: Create compress files
         run: |
-          tar -zcvf ${{ matrix.sdk }}-${{ matrix.arch }}.tar.gz -C bin/packages/${{ matrix.arch }}/ packages_ci .
+          tar -zcvf luci-app-tailscale_${{ matrix.sdk }}-${{ matrix.arch }}.tar.gz -C bin/packages/${{ matrix.arch }}/ packages_ci .
 
       - name: Upload packages
         uses: ncipollo/release-action@v1
@@ -51,7 +51,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           allowUpdates: true
           replacesArtifacts: true
-          artifacts: "${{ matrix.sdk }}-${{ matrix.arch }}.tar.gz"
+          artifacts: "luci-app-tailscale_${{ matrix.sdk }}-${{ matrix.arch }}.tar.gz"
 
       - name: Delete Old Releases
         uses: dev-drprasad/delete-older-releases@master
